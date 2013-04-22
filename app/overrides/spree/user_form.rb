@@ -1,0 +1,4 @@
+Deface::Override.new(:virtual_path  => "spree/shared/_user_form",
+                     :insert_before => "div#password-credentials",
+                     :text          => "<p><label for='user_username'>Name</label><br><input class='title' id='user_username' name='user[username]' size='30' type='text'></p><p><label for='user_company'>Company</label><br><input class='title' id='user_company' name='user[company]' size='30' type='text'></p><p><label for='user_phone'>Phone</label><br><input class='title' id='user_phone' name='user[phone]' size='30' type='text'></p>",
+                     :name          => "registration_future")
