@@ -40,3 +40,5 @@ gem 'jquery-rails', '2.1.4'
 gem 'spree', '1.3.1'
 gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
+
+gem 'spree_wysiwyg', :git => 'git://github.com/illnino/spree_wysiwyg.git'
