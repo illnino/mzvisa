@@ -10,4 +10,5 @@
 //= require store/spree_core
 //= require store/spree_promo
 
-//= require_tree .
+//= require ./jquery.flexslider-min
+//= require ./home_page

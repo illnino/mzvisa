@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424152453) do
+ActiveRecord::Schema.define(:version => 20130425143232) do
 
   create_table "comments", :force => true do |t|
     t.integer  "commentable_id",   :default => 0
@@ -609,13 +609,6 @@ ActiveRecord::Schema.define(:version => 20130424152453) do
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
     t.integer  "position",   :default => 0
-  end
-
-  create_table "spree_taxonomy_posts", :force => true do |t|
-    t.string   "name"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_taxons", :force => true do |t|

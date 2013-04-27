@@ -1,0 +1,94 @@
+#introduction {
+	// border:6px solid #fff;
+	background-color: #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#ffffff)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #ffffff); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image: -moz-linear-gradient(top, #f6f6f6, #ffffff); /* FF3.6 */
+	background-image: -ms-linear-gradient(top, #f6f6f6, #ffffff); /* IE10 */
+	background-image: -o-linear-gradient(top, #f6f6f6, #ffffff); /* Opera 11.10+ */
+	background-image: linear-gradient(top, #f6f6f6, #ffffff);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f6f6f6', EndColorStr='#ffffff'); /* IE6–IE9 */
+	padding: 50px;
+
+    p{
+    	margin: 0;
+    	padding: 0;
+    }
+    h1{ margin-bottom: 20px;}
+    ul.special{
+    	margin-top: 20px;
+    	li{
+    		list-style: none;
+    	}
+    }
+}
+
+#features{
+	background: #f1f1f1;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 50px 0 0;
+	h2 {
+		// margin-left:-50px;
+		margin-top:-51px;
+		padding: 0 50px;
+		margin-bottom:0.437em;
+		background: #fff;
+		float: left;
+		padding-top:0.437em;
+		border-right:1px solid #ccc;
+		border-bottom:1px solid #ccc;
+		-webkit-border-bottom-right-radius:3px;
+		-moz-border-radius:0 0 3px 0;
+		border-radius:0 0 3px 0;
+		// -webkit-box-shadow:6px 6px 0 rgba(0,0,0,0.025);
+		// -moz-box-shadow:6px 6px 0 rgba(0,0,0,0.025);
+		// box-shadow:6px 6px 0 rgba(0,0,0,0.025);
+	}
+	h3{
+		text-align: center
+	}
+}
+
+.flex-caption { text-align: center; }
+html{background-color: #6e95b6;}
+body{
+	// background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIHWNgYGCQ/P//PwMMM4IYyIAJxmFkZJQEsTFUAADQzg8royVN5AAAAABJRU5ErkJggg==);
+	background-color: #6e95b6;
+	padding-bottom:1.618em; /* dotted texture */
+}
+
+h1.site-title{
+	margin-top: 30px;
+	color: black;
+}
+
+.navigation{
+	background: #5fa5e8;
+	margin-top: 30px;
+	#main-nav-bar{
+		margin: 10px 0;
+		padding: 6px 6px 6px 56px;
+		border: none;
+		li a, a.full {color: #fff;}
+		li#link-to-cart a{
+		  color: #fff;
+		}
+	}
+}
+#wrapper{
+	// background-color: #fff;
+	padding: 30px 0;
+}
+
+nav#top-nav-bar ul li {
+	margin-top: 15px;
+}
+
+.container{
+	background-color: #fff;
+}
+
+.my_account{
+	margin-top: 20px;
+}
