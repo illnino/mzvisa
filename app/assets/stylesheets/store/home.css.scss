@@ -28,29 +28,97 @@
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	padding: 50px 0 0;
-	h2 {
-		// margin-left:-50px;
-		margin-top:-51px;
-		padding: 0 50px;
-		margin-bottom:0.437em;
-		background: #fff;
-		float: left;
-		padding-top:0.437em;
-		border-right:1px solid #ccc;
-		border-bottom:1px solid #ccc;
-		-webkit-border-bottom-right-radius:3px;
-		-moz-border-radius:0 0 3px 0;
-		border-radius:0 0 3px 0;
-		// -webkit-box-shadow:6px 6px 0 rgba(0,0,0,0.025);
-		// -moz-box-shadow:6px 6px 0 rgba(0,0,0,0.025);
-		// box-shadow:6px 6px 0 rgba(0,0,0,0.025);
-	}
+
 	h3{
 		text-align: center
 	}
 }
+.promotion{
+	padding: 30px 0 0;
+}
+
+ul#promotion:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+ul#promotion li {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ul#promotion li a {
+  display: block;
+}
+
+ul#promotion li a.info {
+  height: 35px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #bbbbbb;
+  border-bottom: 1px solid #d9d9db;
+  overflow: hidden;
+}
+
+ul#promotion li .product-image {
+  border: 1px solid #d9d9db;
+  padding: 5px;
+  min-height: 110px;
+  background-color: white;
+}
+
+ul#promotion li .product-image:hover {
+  border-color: #00adee;
+}
+
+ul#promotion li .product-image img {
+  max-width: 100%;
+  /* Fluid images for product */
+}
+
+ul#promotion li .price {
+  color: #00adee;
+  font-size: 16px;
+  padding-top: 5px;
+  display: block;
+}
+
+h2.title {
+	// margin-left:-50px;
+	margin-top:-51px;
+	padding: 0 50px;
+	margin-bottom:0.437em;
+	background: #fff;
+	float: left;
+	padding-top:0.437em;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius:0 0 3px 0;
+	border-radius:0 0 3px 0;
+	// -webkit-box-shadow:6px 6px 0 rgba(0,0,0,0.025);
+	// -moz-box-shadow:6px 6px 0 rgba(0,0,0,0.025);
+	// box-shadow:6px 6px 0 rgba(0,0,0,0.025);
+}
+
 
 .flex-caption { text-align: center; }
+
+#news{
+	// background-color: grey;÷
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+#sub-content{
+	// background-color: grey;
+}
+
 html{background-color: #6e95b6;}
 body{
 	// background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIHWNgYGCQ/P//PwMMM4IYyIAJxmFkZJQEsTFUAADQzg8royVN5AAAAABJRU5ErkJggg==);
@@ -87,6 +155,7 @@ nav#top-nav-bar ul li {
 
 .container{
 	background-color: #fff;
+	margin-top: 20px;
 }
 
 .my_account{
