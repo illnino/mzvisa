@@ -1,0 +1,10 @@
+<!-- replace_contents '#taxonomies' -->
+
+<% get_taxonomies.each do |taxonomy| %>
+  <% unless taxonomy.name == 'Tags' %>
+    <h6 class='taxonomy-root'>
+    	<%= link_to t(:shop_by_taxonomy, :taxonomy => taxonomy.name),  nested_taxons_path(Spree::Taxon.find_by_taxonomy_id(taxonomy).permalink) %>
+    </h6>
+    <%= taxons_tree(taxonomy.root, @taxon, Spree::Config[:max_level_in_taxons_menu] || 1) %>
+  <% end %>
+<% end %>

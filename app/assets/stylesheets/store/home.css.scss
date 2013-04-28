@@ -66,7 +66,7 @@ ul#promotion li a.info {
 }
 
 ul#promotion li .product-image {
-  border: 1px solid #d9d9db;
+  // border: 1px solid #d9d9db;
   padding: 5px;
   min-height: 110px;
   background-color: white;
@@ -131,7 +131,7 @@ h1.site-title{
 	color: black;
 }
 
-.navigation{
+.home-navigation{
 	background: #5fa5e8;
 	margin-top: 30px;
 	#main-nav-bar{
@@ -161,3 +161,5 @@ nav#top-nav-bar ul li {
 .my_account{
 	margin-top: 20px;
 }
+
+.content-padding{ margin-top: 20px; }
