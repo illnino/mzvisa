@@ -12,3 +12,4 @@
 
 //= require ./jquery.flexslider-min
 //= require ./home_page
+//= require store/spree_news

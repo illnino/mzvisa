@@ -12,3 +12,4 @@
 
 //= require_tree .
 //= require admin/spree_wysiwyg
+//= require admin/spree_news

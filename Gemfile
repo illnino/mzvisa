@@ -42,3 +42,5 @@ gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
 
 gem 'spree_wysiwyg', :git => 'git://github.com/illnino/spree_wysiwyg.git'
+gem 'haml'
+gem 'spree_news', :git => 'git@github.com:illnino/spree_news.git'
