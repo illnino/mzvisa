@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430145942) do
+ActiveRecord::Schema.define(:version => 20130504041758) do
 
   create_table "comments", :force => true do |t|
     t.integer  "commentable_id",   :default => 0
@@ -139,6 +139,23 @@ ActiveRecord::Schema.define(:version => 20130430145942) do
 
   add_index "spree_configurations", ["name", "type"], :name => "index_spree_configurations_on_name_and_type"
 
+  create_table "spree_contents", :force => true do |t|
+    t.integer  "page_id"
+    t.string   "title"
+    t.text     "body"
+    t.string   "link"
+    t.string   "link_text"
+    t.string   "context"
+    t.boolean  "hide_title",              :default => false
+    t.integer  "position",                :default => 999
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+  end
+
   create_table "spree_countries", :force => true do |t|
     t.string  "iso_name"
     t.string  "iso"
@@ -220,6 +237,30 @@ ActiveRecord::Schema.define(:version => 20130430145942) do
     t.datetime "updated_at",                    :null => false
   end
 
+  create_table "spree_menu_bars", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "css_class"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "spree_menus", :force => true do |t|
+    t.integer  "page_id"
+    t.integer  "menu_bar_id"
+    t.integer  "sequence"
+    t.integer  "parent_id"
+    t.string   "link_text"
+    t.string   "url"
+    t.boolean  "visible",                 :default => true
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+    t.string   "menu_image_file_name"
+    t.string   "menu_image_content_type"
+    t.integer  "menu_image_file_size"
+    t.datetime "menu_image_updated_at"
+  end
+
   create_table "spree_option_types", :force => true do |t|
     t.string   "name",         :limit => 100
     t.string   "presentation", :limit => 100
@@ -276,21 +317,17 @@ ActiveRecord::Schema.define(:version => 20130430145942) do
 
   create_table "spree_pages", :force => true do |t|
     t.string   "title"
-    t.string   "permalink"
+    t.string   "nav_title"
+    t.string   "path"
+    t.string   "meta_title"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.text     "body"
-    t.string   "link"
-    t.string   "type"
-    t.integer  "position"
-    t.boolean  "in_nav_menu",      :default => false
-    t.datetime "published_at"
-    t.integer  "product_id"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.integer  "position",         :default => 999
+    t.boolean  "accessible",       :default => true
+    t.boolean  "visible",          :default => true
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
-
-  add_index "spree_pages", ["permalink"], :name => "index_spree_pages_on_permalink", :unique => true
 
   create_table "spree_pages_products", :id => false, :force => true do |t|
     t.integer "page_id"
