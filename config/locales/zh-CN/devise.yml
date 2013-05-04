@@ -1,0 +1,56 @@
+zh-CN:
+  username: "姓名"
+  logged_in_as: "Logged in as"
+  logged_in_succesfully: "成功登陆"
+  logged_out: "成功退出"
+  login: Login
+  login_as_existing: "Login as Existing Customer"
+  login_failed: "验证失败.请核对你的邮箱与密码"
+  login_name: '登陆'
+  logout: '退出'
+  errors:
+    messages:
+      not_found: '找不到'
+      already_confirmed: '已经确认'
+      not_locked: '不再给冻结'
+      not_saved:
+        one: '有一个错误导致该%{resource}不能被保存:'
+        other: '%{count}个错误导致该{resource}不能被保存:'
+  devise:
+    failure:
+      unauthenticated: '你需要先登陆或者注册'
+      unconfirmed: '你需要先确认你的账号才能继续操作'
+      locked: '你的账户已被锁定'
+      invalid: '邮件地址或者密码无效'
+      invalid_token: '无效的token'
+      timeout: '你的操作已过期, 请重新登陆'
+      inactive: '你的账户并未激活'
+    user_passwords:
+      user:
+        cannot_be_blank: '密码不能为空'
+        send_instructions: '重置密码邮件将于几分钟内发送到你的邮箱地址, 请查收'
+        updated: '你的密码已经成功修改. 请重新登陆'
+    confirmations:
+      send_instructions: '你将于数分钟内收到一封确认你账号的邮件'
+      confirmed: '你的账户已被确认. 请登陆'
+    user_registrations:
+      signed_up: '欢迎光临! 你已成功登陆.'
+      inactive_signed_up: '你已成功注册,但是你暂不能登陆. 因为你的账户%{reason}'
+      updated: '你已成功更新你的账户'
+      destroyed: '你的账户已被删除. 希望我们能够再合作.'
+    user_sessions:
+      signed_in: '成功登陆.'
+      signed_out: '成功退出.'
+    unlocks:
+      send_instructions: '你将于数分钟内收到一封如何解封你账号的邮件'
+      unlocked: '你的账户已成功解封. 请登陆.'
+    oauth_callbacks:
+      success: '%{kind}账户已成功授权.'
+      failure: '%{kind}账户授权失败.理由如下：%{reason}'
+    mailer:
+      confirmation_instructions:
+        subject: '登陆方式指南'
+      reset_password_instructions:
+        subject: '重置密码指南'
+      unlock_instructions:
+        subject: '账户解封指南'

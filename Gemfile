@@ -47,3 +47,6 @@ gem 'spree_news', :git => 'git@github.com:illnino/spree_news.git'
 gem 'spree_essentials', :git => 'git://github.com/xmpolaris/spree_essentials.git', :branch => '1.3.x'
 gem 'spree_essential_cms', :git => 'git://github.com/xmpolaris/spree_essential_cms.git', :branch => '1.3.x'
 gem 'spree_essential_menus', :git => 'git@github.com:illnino/spree_essential_menus.git'
+
+gem 'rails-i18n'
+gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'

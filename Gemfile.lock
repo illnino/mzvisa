@@ -26,6 +26,15 @@ GIT
       spree_core (~> 1.0)
 
 GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: b135d22b5a501966ca91408cc45b6ed8e6511761
+  specs:
+    spree_i18n (1.0.0)
+      i18n (~> 0.6)
+      rails-i18n
+      spree_core
+
+GIT
   remote: git://github.com/xmpolaris/spree_essential_cms.git
   revision: dc0c4bed418580e17108b199d38908810f7684dc
   branch: 1.3.x
@@ -202,6 +211,8 @@ GEM
       activesupport (= 3.2.12)
       bundler (~> 1.0)
       railties (= 3.2.12)
+    rails-i18n (0.7.3)
+      i18n (~> 0.5)
     railties (3.2.12)
       actionpack (= 3.2.12)
       activesupport (= 3.2.12)
@@ -307,6 +318,7 @@ DEPENDENCIES
   haml
   jquery-rails (= 2.1.4)
   rails (= 3.2.12)
+  rails-i18n
   sass-rails (~> 3.2.3)
   spree (= 1.3.1)
   spree_auth_devise!
@@ -314,6 +326,7 @@ DEPENDENCIES
   spree_essential_menus!
   spree_essentials!
   spree_gateway!
+  spree_i18n!
   spree_news!
   spree_wysiwyg!
   sqlite3
