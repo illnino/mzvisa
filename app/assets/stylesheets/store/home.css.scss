@@ -163,3 +163,14 @@ nav#top-nav-bar ul li {
 }
 
 .content-padding{ margin-top: 20px; }
+nav ul#main-nav-bar{
+	li.highlight a{
+		border-bottom: 2px solid #fff;
+	}
+	li{
+		a:hover{
+			border-bottom: 2px solid #fff;
+		}
+	}
+}
+a:hover{ color: #fff !important; }
