@@ -16,7 +16,7 @@ preload_app true
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
  
-pid "/tmp/unicorn.mzvisa.pid"
+pid "#{APP_ROOT}/tmp/unicorn.mzvisa.pid"
  
 # Production specific settings
 if env == "production"
