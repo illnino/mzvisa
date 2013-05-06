@@ -13,6 +13,7 @@ end
 group :production do
 	gem 'pg'
 	gem 'therubyracer'
+	gem 'unicorn'
 end
 
 # Gems used only for assets and not required
