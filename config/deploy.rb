@@ -7,7 +7,7 @@ set :repository,  "git@github.com:illnino/mzvisa.git"
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-server = "183.129.244.148"
+server = "mzvisa.com"
 role :web, server                          # Your HTTP server, Apache/etc
 role :app, server                          # This may be the same as your `Web` server
 role :db, server, :primary => true # This is where Rails migrations will run
