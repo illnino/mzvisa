@@ -36,7 +36,7 @@ after "bundle:install", "symlink_database_yml"
 namespace :unicorn do
   desc "Zero-downtime restart of Unicorn"
   task :restart, except: { no_release: true } do
-    run "kill -s USR2 `cat #{shared_path}/pids/unicorn.mzvisa.pid`"
+    run "kill -s USR2 `cat /tmp/unicorn.mzvisa.pid`"
   end
 
   desc "Start unicorn"
@@ -46,12 +46,11 @@ namespace :unicorn do
 
   desc "Stop unicorn"
   task :stop, except: { no_release: true } do
-    run "kill -s QUIT `cat #{shared_path}/pids/unicorn.mzvisa.pid`"
+    run "kill -s QUIT `cat /tmp/unicorn.mzvisa.pid`"
   end
 end
 
 after "deploy:restart", "unicorn:restart"
-
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
