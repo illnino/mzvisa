@@ -33,36 +33,25 @@ end
 after "bundle:install", "symlink_database_yml"
 
 
-# namespace :unicorn do
-#   desc "Zero-downtime restart of Unicorn"
-#   task :restart, except: { no_release: true } do
-#     run "kill -s USR2 `cat /tmp/unicorn.mzvisa.pid`"
-#   end
-
-#   desc "Start unicorn"
-#   task :start, except: { no_release: true } do
-#     run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
-#   end
-
-#   desc "Stop unicorn"
-#   task :stop, except: { no_release: true } do
-#     run "kill -s QUIT `cat /tmp/unicorn.mzvisa.pid`"
-#   end
-# end
-
-# after "deploy:restart", "unicorn:restart"
-
-namespace :deploy do
-  task :start do
-    run "/etc/init.d/apache2 start"
+namespace :unicorn do
+  desc "Zero-downtime restart of Unicorn"
+  task :restart, except: { no_release: true } do
+    run "kill -s USR2 `cat /tmp/unicorn.mzvisa.pid`"
   end
-  task :stop do
-    run "/etc/init.d/apache2 stop"
+
+  desc "Start unicorn"
+  task :start, except: { no_release: true } do
+    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
   end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "touch #{File.join(current_path,'tmp','restart.txt')}"
+
+  desc "Stop unicorn"
+  task :stop, except: { no_release: true } do
+    run "kill -s QUIT `cat /tmp/unicorn.mzvisa.pid`"
   end
 end
+
+after "deploy:restart", "unicorn:restart"
+
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
