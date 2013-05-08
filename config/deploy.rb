@@ -16,6 +16,9 @@ set :user, "spree"
 
 set :deploy_to, "/home/spree/#{application}"
 set :use_sudo, false
+set :deploy_via, :remote_cache
+
+default_run_options[:pty] = true
 
 default_run_options[:shell] = '/bin/bash --login'
 default_environment["RAILS_ENV"] = 'production'
@@ -25,44 +28,35 @@ before "bundle:install" do
 	run "cd #{fetch(:latest_release)} && bundle config build.pg --with-pg=/usr/pgsql-9.2"
 end
 
-task :symlink_database_yml do
-  run "rm #{release_path}/config/database.yml"
-  run "ln -sfn #{shared_path}/config/database.yml
-       #{release_path}/config/database.yml"
+namespace :deploy do
+  %w[start stop restart].each do |command|
+    desc "#{command} unicorn server"
+    task command, roles: :app, except: {no_release: true} do
+      run "/etc/init.d/unicorn_#{application} #{command}"
+    end
+  end
+
+  task :setup_config, roles: :app do
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    run "mkdir -p #{shared_path}/config"
+    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    puts "Now edit the config files in #{shared_path}."
+  end
+  after "deploy:setup", "deploy:setup_config"
+
+  task :symlink_config, roles: :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+  after "deploy:finalize_update", "deploy:symlink_config"
+
+  desc "Make sure local git is in sync with remote."
+  task :check_revision, roles: :web do
+    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+      puts "WARNING: HEAD is not the same as origin/master"
+      puts "Run `git push` to sync changes."
+      exit
+    end
+  end
+  before "deploy", "deploy:check_revision"
 end
-after "bundle:install", "symlink_database_yml"
-
-
-namespace :unicorn do
-  desc "Zero-downtime restart of Unicorn"
-  task :restart, except: { no_release: true } do
-    run "kill -s USR2 `cat /tmp/unicorn.mzvisa.pid`"
-  end
-
-  desc "Start unicorn"
-  task :start, except: { no_release: true } do
-    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
-  end
-
-  desc "Stop unicorn"
-  task :stop, except: { no_release: true } do
-    run "kill -s QUIT `cat /tmp/unicorn.mzvisa.pid`"
-  end
-end
-
-after "deploy:restart", "unicorn:restart"
-
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
-
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
-
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
