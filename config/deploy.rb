@@ -17,7 +17,7 @@ set :user, "spree"
 set :deploy_to, "/home/spree/#{application}"
 set :use_sudo, false
 set :deploy_via, :remote_cache
-set :ssh_options, {:forward_agent => true}
+#set :ssh_options, {:forward_agent => true}
 
 default_run_options[:pty] = true
 
@@ -38,8 +38,8 @@ namespace :deploy do
   end
 
   task :setup_config, roles: :app do
-    sudo run "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    sudo run "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
