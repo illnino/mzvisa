@@ -54,7 +54,7 @@ gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-s
 
 gem 'spree_wysiwyg', :git => 'git://github.com/illnino/spree_wysiwyg.git'
 gem 'haml'
-# gem 'spree_news', :git => 'git@github.com:illnino/spree_news.git'
+gem 'spree_news', :git => 'git@github.com:illnino/spree_news.git'
 gem 'spree_essentials', :git => 'git://github.com/xmpolaris/spree_essentials.git', :branch => '1.3.x'
 gem 'spree_essential_cms', :git => 'git://github.com/xmpolaris/spree_essential_cms.git', :branch => '1.3.x'
 gem 'spree_essential_menus', :git => 'git@github.com:illnino/spree_essential_menus.git'

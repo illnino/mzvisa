@@ -14,3 +14,4 @@
 //= require admin/spree_wysiwyg
 //= require admin/spree_essentials
 //= require admin/spree_essential_menus
+//= require admin/spree_news
