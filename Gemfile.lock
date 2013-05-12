@@ -63,7 +63,8 @@ GIT
 
 GIT
   remote: git@github.com:illnino/spree_news.git
-  revision: d058e945d25e05ec8f71acb47cf26018bf106af3
+  revision: db4641cf4f7f864755892c1d04d1bdb2cd26fb33
+  branch: 1.1
   specs:
     spree_news (0.0.6)
       haml (~> 3.1.4)
