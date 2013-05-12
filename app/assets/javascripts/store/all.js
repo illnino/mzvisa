@@ -12,5 +12,4 @@
 
 //= require ./jquery.flexslider-min
 //= require ./home_page
-//= require store/spree_news
 //= require store/spree_essential_menus
