@@ -646,6 +646,8 @@ zh-CN:
     variant_deleted: "具体类别已经被删除"
     variant_not_deleted: "具体类别不能被删除"
   on_hand: "库存"
+  on_demand: "按需求"
+  cost_currency: "货币"
   one_default_category_with_default_tax_rate: "You should configure exactly one default category with your countries default tax rate"
   operation: "操作"
   option_type: "Option Type"
@@ -1121,6 +1123,7 @@ zh-CN:
   tax_type: "税款类型"
   taxon: "分类"
   taxon_edit: "编辑分类"
+  taxon_placeholder: ""
   taxonomies: "分类层级"
   taxonomies_setting_description: "创建并管理分类层级"
   taxonomy: Taxonomy
