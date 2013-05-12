@@ -1296,3 +1296,16 @@ zh-CN:
         token: Token
         explanation: The fields below may already be populated if you chose to register with Jirafe from the admin dashboard.
       jirafe_settings_updated: Jirafe Settings have been updated.
+########
+# admin cms
+#
+#
+########
+  spree:
+    admin:
+      shared:
+        contents_tab:
+          content: "内容"
+      subnav:
+        uploads: "Uploads"
+
