@@ -174,3 +174,16 @@ nav ul#main-nav-bar{
 	}
 }
 // a:hover{ color: #fff !important; }
+
+#link-to-login, #link-to-cart {display: inline-block;}
+
+.flash.success, .success.errorExplanation{
+	text-align: center;
+	margin-top: 2px;
+}
+
+.flash.notice, .notice.errorExplanation {
+	background-color: #9fc820;
+	text-align: center;
+	margin-top: 2px;
+}
