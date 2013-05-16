@@ -1,0 +1,6 @@
+%li.three.columns{:class => cycle('alpha', 'secondary', '', 'omega secondary', :name => 'classes'), :id => "product_#{product.id}"}
+	.product-image
+		=link_to small_image(product, :itemprop => "image"), product
+		=link_to product.name, product
+		%span{:itemprop => "price"}
+			=product.price_in(current_currency).display_price

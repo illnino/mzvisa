@@ -115,15 +115,14 @@ h2.title {
 	overflow: hidden;
 }
 
-#sub-content{
-	// background-color: grey;
+
+body{
+	padding-bottom:1.618em; /* dotted texture */
+	background-color: #fafafa;
 }
 
-html{background-color: #6e95b6;}
-body{
-	// background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIHWNgYGCQ/P//PwMMM4IYyIAJxmFkZJQEsTFUAADQzg8royVN5AAAAABJRU5ErkJggg==);
-	background-color: #6e95b6;
-	padding-bottom:1.618em; /* dotted texture */
+.container{
+	background-color: white;
 }
 
 h1.site-title{
@@ -153,10 +152,6 @@ nav#top-nav-bar ul li {
 	margin-top: 15px;
 }
 
-.container{
-	background-color: #fff;
-	margin-top: 20px;
-}
 
 .my_account{
 	margin-top: 20px;
@@ -186,4 +181,73 @@ nav ul#main-nav-bar{
 	background-color: #9fc820;
 	text-align: center;
 	margin-top: 2px;
+}
+
+/* new things */
+.top-link-bar{
+  color: grey;
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+  li.top-link{
+    float: right;
+    margin: 0 5px;
+    padding: 0 5px;
+    list-style-type: none;
+  }
+}
+
+header{
+	padding: 10px 0;
+  .logo strong {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -999em;
+    overflow: hidden;
+  }
+  li{
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    list-style-type: none;
+  }
+  input, button {
+    display: inline;
+  }
+}
+
+.products-grid .product-image {
+  display: block;
+  margin: 0 0 12px;
+  position: relative;
+  z-index: 1;
+}
+
+ul.products-grid li.item1{
+  display: inline-block;
+  text-align: center;
+  img, a{
+    display: block;
+    margin: auto;
+    .product-name{
+      maring-top: 10px;
+      border-top: 1px solid grey;
+    }
+  }
+  padding: 0;
+  margin: 0 0px 30px;
+  position: relative;
+  background: white;
+  border: 9px solid white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 6px 0px   rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  list-style-type: none;
 }
