@@ -1,17 +1,20 @@
-/ encoding: utf-8
+-# coding: utf-8
 .header-container
-	.top-link-bar.sixteen.columns.clearfix
-		.eight.columns.alpha
-			%span 服务热线: 400-688-2262
-		.eight.columns.omega
-			= render :partial => "spree/shared/top_link_bar"
-	.header-wrapper
-		%header.sixteen.columns.clearfix
-			.four.columns.alpha
-				%h1.logo
-					%strong MZVisa
-					%a.logo{:href => spree.root_path, :title => "mzvisa"}
-						%img{:alt => "商店", :src => '/assets/store/logo.png' }
-			.twelve.columns.omega
-				= render :partial => "spree/shared/navi"
-				= render :partial => "spree/shared/search"
+	#top-link-bar.overfix
+		.sixteen.columns.clearfix
+			.eight.columns.alpha
+				%span 服务热线: 400-688-2262
+			.eight.columns.omega
+				= render :partial => "spree/shared/top_link_bar"
+	#header-wrapper
+		%header.overfix
+			.sixteen.columns.clearfix
+				.four.columns.alpha
+					%h1.logo
+						%strong MZVisa
+						%a.logo{:href => spree.root_path, :title => "mzvisa"}
+							%img{:alt => "商店", :src => '/assets/store/logo.png' }
+				.eight.columns
+					= render :partial => "spree/shared/navi"
+				.four.columns.omega
+					= render :partial => "spree/shared/search"

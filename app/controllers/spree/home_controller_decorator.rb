@@ -6,6 +6,8 @@ Spree::HomeController.class_eval do
 
     promotion= Spree::Taxon.where(:name => 'Promotion').first
     @promotion_products = promotion.products.active if promotion
+
+    @news = Spree::Post.published
   end
 
 end

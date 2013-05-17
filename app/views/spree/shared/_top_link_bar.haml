@@ -1,21 +1,20 @@
-.top-links
-	- if spree_current_user
-		%ul
-			%li.last.top-link
-				= link_to t(:my_accout), spree.account_path
-			%li.top-link
-				= link_to t(:logout), spree.destroy_user_session_path
-			%li.top-link
-				= link_to_cart
-			%li.top-link
-				= link_to t(:home), spree.root_path
-	- else
-		%ul
-			%li.last.top-link
-				= link_to t(:login), spree.login_path
-			%li.top-link
-				= link_to t(:sign_up), spree.signup_path
-			%li.top-link
-				= link_to t(:shop), "/products"
-			%li.top-link
-				= link_to t(:home), spree.root_path
+- if spree_current_user
+	%ul.overfix
+		%li.last.top-link
+			= link_to t(:my_accout), spree.account_path
+		%li.top-link
+			= link_to t(:logout), spree.destroy_user_session_path
+		%li.top-link
+			= link_to_cart
+		%li.top-link
+			= link_to t(:home), spree.root_path
+- else
+	%ul.overfix
+		%li.last.top-link
+			= link_to t(:login), spree.login_path
+		%li.top-link
+			= link_to t(:sign_up), spree.signup_path
+		%li.top-link
+			= link_to t(:shop), "/products"
+		%li.top-link
+			= link_to t(:home), spree.root_path

@@ -1,5 +1,5 @@
 -# coding: utf-8
-.slider.sixteen.columns.clearfix
+.slider.overfix
   .eight.columns.alpha
     %h1 广州威莎斯商旅有限公司
     %p 是一家专业的签证机构，现位于国际化大都市——广州。创办七年以来，一直致力于办理欧洲申根国、英国、美国、加拿大、澳洲、新西兰，以及亚洲和非洲等国家与地区各类型签证，其中包括旅游、商务、探亲、访友等。公司资源丰富，资质较硬，拥有一支专业的服务团队，能为企事业客户以及私人旅行者提供全方位的优质服务。
@@ -10,19 +10,21 @@
       %Li 更低价：低价不低质，更低的价格，却提供更优质的服务。全程一对一服务，安心周到，确保顺利出签。
   .eight.columns.omega
     - if @slider_products
-      #slider-products.flexslider
+      #slider.flexslider
         %ul.slides
           - @slider_products.each do |product|
             = render 'product', :product => product
-.main-container.sixteen.columns.cleafix
+#seperator.columns.four.offset-by-six
+  %hr
+.main-container.overfix
   .twelve.columns.alpha
     %h2.sub-header 限时优惠
-    %hr
-    - if @promotion_products
-      %ul#promotion.inline.product-listing
+    .products
+      - if @promotion_products
         - @promotion_products.each do |product|
           = render 'promotion', :product => product
-      - reset_cycle("classes")
+        - reset_cycle("classes")
   .four.columns.omega
-    %aside#news.columns.four.omega{:data-hook => "store-news"}
+    %aside#news.overfix
+      .columns.four.omega{"data-hook" => "store-news"}
 
