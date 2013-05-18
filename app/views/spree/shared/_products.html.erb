@@ -1,0 +1,30 @@
+<%
+  paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+<% if products.empty? %>
+  <%= t(:no_products_found) %>
+<% elsif params.key?(:keywords) %>
+  <h6 class="search-results-title"><%= t(:search_results, :keywords => h(params[:keywords])) %></h6>
+<% end %>
+
+<% if products.any? %>
+
+  <% products.each do |product| %>
+    <% my_class = cycle('alpha', 'secondary', 'third', 'omega', :name => 'classes') %>
+    <div class="three columns <%= my_class %>" id="product_<%= product.id %>">
+      <div class="product">
+        <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+        <%= link_to product.name, product %>
+      </div>
+    </div>
+    <% if my_class == "omega" %>
+      <br class="clear">
+    <% end %>
+  <% end %>
+  <% reset_cycle("classes") %>
+<% end %>
+
+<% if paginated_products.respond_to?(:num_pages) %>
+  <%= paginate paginated_products %>
+<% end %>

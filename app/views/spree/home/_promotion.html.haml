@@ -1,6 +1,9 @@
-.three.columns{:class => cycle('alpha', 'secondary', 'third', 'omega', :name => 'classes'), :id => "product_#{product.id}"}
+-my_class = cycle('alpha', 'secondary', 'third', 'omega', :name => 'classes')
+.three.columns{:class => my_class , :id => "product_#{product.id}"}
 	.product
 		=link_to small_image(product, :itemprop => "image"), product
 		=link_to product.name, product
 		%span{:itemprop => "price"}
 			=product.price_in(current_currency).display_price
+- if my_class == 'omega'
+	%br.clear

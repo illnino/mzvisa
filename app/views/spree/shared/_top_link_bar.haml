@@ -1,9 +1,9 @@
 - if spree_current_user
 	%ul.overfix
 		%li.last.top-link
-			= link_to t(:my_accout), spree.account_path
-		%li.top-link
 			= link_to t(:logout), spree.destroy_user_session_path
+		%li.top-link
+			= link_to t(:my_account), spree.account_path
 		%li.top-link
 			= link_to_cart
 		%li.top-link
