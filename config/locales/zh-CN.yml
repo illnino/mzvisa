@@ -422,7 +422,7 @@ zh-CN:
   email: "电子邮件"
   email_address: "电子邮件地址"
   email_server_settings_description: "设置邮件服务器。"
-  empty: "Empty"
+  empty: "您的购物车是空的"
   empty_cart: "清空购物车"
   enable_login_via_login_password: "使用标准的电子邮件/密码"
   enable_login_via_openid: "使用OpenID代替"
