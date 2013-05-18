@@ -11,11 +11,12 @@
           %Li 更快捷：因为专业，所以快捷。我们熟悉各国领馆最新的政策，拥有丰富的资源，可以保证在最短的时间内，能更快捷的领到签证。
           %Li 更低价：低价不低质，更低的价格，却提供更优质的服务。全程一对一服务，安心周到，确保顺利出签。
       .eight.columns.omega
-        - if @slider_products
-          #slider.flexslider
-            %ul.slides
-              - @slider_products.each do |product|
-                = render 'product', :product => product
+        - if @uploads
+          #slider
+            .flexslider
+              %ul.slides
+                - @uploads.each do |upload|
+                  = render 'product', :upload => upload
 .main-container.overfix
   .container.overflix
     .twelve.columns.alpha
