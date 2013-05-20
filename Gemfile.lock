@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/illnino/spree_wysiwyg.git
-  revision: 9e1f001f40f7862bc495cf90454601a6625b5961
+  revision: 4eef716e79a3d757bcc89487a6959bbe935ad159
+  branch: 1.1
   specs:
     spree_wysiwyg (1.3)
       spree_core (~> 1.3.1)
@@ -345,7 +346,7 @@ DEPENDENCIES
   rails (= 3.2.12)
   rails-i18n
   sass-rails (~> 3.2.3)
-  spree (= 1.3.1)
+  spree
   spree_auth_devise!
   spree_essential_cms!
   spree_essential_menus!

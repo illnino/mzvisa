@@ -11,6 +11,7 @@ Spree.config do |config|
   # config.site_name = "Spree Demo Site"
   config.allow_ssl_in_production = false
   # config.products_per_page = 100
+  config.admin_interface_logo = "/assets/store/logo.png"
 end
 
 Spree.user_class = "Spree::User"
