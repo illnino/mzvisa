@@ -354,6 +354,12 @@ zh-CN:
   coupon: '优惠'
   coupon_code: '优惠码'
   coupon_code_applied: '优惠码已成功使用, 你的订单现已享受优惠.'
+  coupon_code_already_applied: '优惠码已经被使用'
+  coupon_code_better_exists: '我们已为你提供更优惠的价格'
+  coupon_code_expired: '优惠码过期'
+  coupon_code_max_usage: '优惠码已达到最大使用限制'
+  coupon_code_not_eligible: '优惠码不正确'
+  coupon_code_not_found: '优惠码不存在'
   create: "创建"
   create_a_new_account: "创建一个新帐号"
   create_user_account: "创建用户帐号"
