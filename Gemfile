@@ -52,7 +52,7 @@ gem 'spree', :branch => '1-3-stable'
 gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
 
-gem 'spree_wysiwyg', :git => 'git://github.com/illnino/spree_wysiwyg.git', :branch => '1.1'
+gem 'spree_wysiwyg', :git => 'git://github.com/illnino/spree_wysiwyg.git', :branch => '1.2'
 gem 'haml'
 gem 'spree_news', :git => 'git@github.com:illnino/spree_news.git'
 gem 'spree_essentials', :git => 'git://github.com/xmpolaris/spree_essentials.git', :branch => '1.3.x'
