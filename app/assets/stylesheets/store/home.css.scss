@@ -20,12 +20,16 @@ ul{
 // }
 
 #top-link-bar{
-  background-color: white;
+  background-color: #61B3DE;
   padding: 5px 0;
+  color:white;
   ul li{
     float:right;
     margin-left: 10px;
     list-style: none;
+    a, a:hover{
+      color: white;
+    }
   }
 }
 
@@ -123,6 +127,9 @@ header{
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
   ul{
     padding: 0 10px;
+    li{
+      list-style: none;
+    }
   }
 }
 

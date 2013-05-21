@@ -258,7 +258,7 @@ zh-CN:
   amount: "金额"
   analytics_trackers: "追踪分析"
   and: and
-  apply: "Apply"
+  apply: "应用"
   are_you_sure: "你确定么？"
   are_you_sure_category: "你确定你要删除这个分类么?"
   are_you_sure_delete: "你确定你要删除这条记录么?"
@@ -453,16 +453,16 @@ zh-CN:
   events:
     spree:
       cart:
-        add: 'Add to cart'
+        add: '添加到购物车'
       checkout:
-        coupon_code_added: Coupon code added
+        coupon_code_added: '使用优惠码'
       content:
-        visited: Visit static content page
+        visited: '访问特定页面'
       order:
-        contents_changed: "Order contents changed"
-      page_view: "Static page viewed"
+        contents_changed: "订单内容改变"
+      page_view: "访问特定页面"
       user:
-        signup: 'User signup'
+        signup: '新用户注册'
   existing_customer: "现有顾客"
   expiration: "过期"
   expiration_month: "过期月份"
