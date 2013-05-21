@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/illnino/spree_wysiwyg.git
-  revision: 4eef716e79a3d757bcc89487a6959bbe935ad159
-  branch: 1.1
+  revision: 148c08ea45951c55536fb3c4588018769f1691e0
+  branch: 1.2
   specs:
     spree_wysiwyg (1.3)
       spree_core (~> 1.3.1)
