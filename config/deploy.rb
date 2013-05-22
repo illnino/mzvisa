@@ -67,3 +67,6 @@ namespace :deploy do
   end
   before "deploy", "deploy:check_revision"
 end
+
+after "deploy:update", "deploy:create_spree_images_symlink"
+after "deploy:restart", "deploy:cleanup" # leave the last 5 releases only
