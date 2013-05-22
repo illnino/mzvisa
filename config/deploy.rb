@@ -37,6 +37,11 @@ namespace :deploy do
     end
   end
 
+  task :create_spree_images_symlink, :roles => [:app] do
+    run "rm -fr #{release_path}/public/spree"
+    run "mkdir -p #{shared_path}/public/spree && ln -nfs #{shared_path}/public/spree #{release_path}/public/"
+  end
+
   task :setup_config, roles: :app do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
