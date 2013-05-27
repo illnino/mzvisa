@@ -1219,6 +1219,13 @@ zh-CN:
   phone: "电话"
   countries: '国家'
   add_one: '添加'
+  views:
+    pagination:
+      next: "下一页"
+      last: "最后一页"
+      first: "第一页"
+      previous: "前一页"
+      truncate: ""
 ########
 # devise
 #
