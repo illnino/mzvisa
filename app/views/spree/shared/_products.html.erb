@@ -11,11 +11,16 @@
 <% if products.any? %>
 
   <% products.each do |product| %>
-    <% my_class = cycle('alpha', 'secondary', 'third', 'omega', :name => 'classes') %>
-    <div class="three columns <%= my_class %>" id="product_<%= product.id %>">
-      <div class="product">
-        <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
-        <%= link_to product.name, product %>
+    <% my_class = cycle('alpha', 'secondary', 'omega', :name => 'classes') %>
+    <div class="four columns <%= my_class %>" id="product_<%= product.id %>">
+      <div class="item">
+        <%= link_to mini_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+        <div class="details">
+          <span class="product-title"><%= link_to product.name, product %></span>
+          <span class="product-price"><%= product.price %></span>
+        </div>
+
+
       </div>
     </div>
     <% if my_class == "omega" %>

@@ -68,7 +68,8 @@ header{
 }
 
 #content{
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #header-wrapper{
@@ -215,10 +216,10 @@ footer{
   font-size: 16px;
 }
 
-span.price{
-  font-weight: bold;
-  color: #61a1f0;
-}
+// span.price{
+//   font-weight: bold;
+//   color: #61a1f0;
+// }
 
 [data-hook="product_price"]{
   margin-bottom: 24px;
@@ -228,9 +229,11 @@ span.price{
 
 #sidebar{
   border-top: 9px solid $main-color;
-  padding: 10px;
   background-color: white;
   margin-bottom: 20px;
+  > div{
+    padding: 10px;
+  }
 }
 
 #product-properties{
@@ -270,3 +273,25 @@ ul#products li{
 }
 
 .pagination{ clear:both; }
+.item{
+  padding: 5px;
+  a > img{
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  .details{
+    margin-left: 10px;
+    padding-top: 5px;
+
+    span{ display: block; margin-left: 53px;}
+    .product-title{
+      padding-bottom: 5px;
+    }
+    .product-price{
+      // font-weight: bold;
+      // color:red;
+    }
+  }
+}
+
