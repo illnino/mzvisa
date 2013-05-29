@@ -82,7 +82,7 @@ header{
 }
 
 .main-container{
-  margin: 40px 0;
+  margin-bottom: 40px;
   .products{
     margin: 20px 0;
   }
@@ -101,9 +101,9 @@ header{
   -moz-box-shadow: 0 0 6px 0 rgba(0,0,0,0.15);
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.15);
   a{
-    margin: 20px 0 0;
+    // margin: 20px 0 0;
     display: block;
-    padding: 10px 0 0;
+    // padding: 10px 0 0;
     text-decoration: none;
   }
   span{
@@ -295,3 +295,6 @@ ul#products li{
   }
 }
 
+// h2.sub-header{
+//   border-bottom: 6px solid $main-color;
+// }

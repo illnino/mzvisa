@@ -17,7 +17,7 @@
         <%= link_to mini_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
         <div class="details">
           <span class="product-title"><%= link_to product.name, product %></span>
-          <span class="product-price"><%= product.price %></span>
+          <span class="product-price"><%= product.price_in(current_currency).display_price %></span>
         </div>
 
 
