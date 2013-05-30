@@ -75,6 +75,7 @@ namespace :deploy do
       else
         logger.info "Skipping asset pre-compilation because there were no asset changes"
       end
+    end
   end
 end
 
