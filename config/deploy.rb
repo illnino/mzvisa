@@ -16,7 +16,7 @@ set :user, "spree"
 
 set :deploy_to, "/home/spree/#{application}"
 set :use_sudo, false
-# set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 #set :ssh_options, {:forward_agent => true}
 
 default_run_options[:pty] = true
